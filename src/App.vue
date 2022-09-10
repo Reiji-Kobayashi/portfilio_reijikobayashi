@@ -1,11 +1,10 @@
 <template>
   <h1>Portfolio Reiji Kobayashi</h1>
-  <router-link to="/">Home</router-link> |
-  <router-link to="/research">Research</router-link> |
-  <router-link to="/history">History</router-link> |
 
+  <Menubar :model="items" />
 
   <router-view></router-view>
+
 </template>
 
 <style>
@@ -18,3 +17,29 @@
   margin-top: 60px;
 }
 </style>
+
+<script>
+  export default {
+    data() {
+      return {
+        items: [
+          {
+            label:'Home',
+            icon:'pi pi-fw pi-home',
+            to: '/'
+          },
+          {
+            label:'Research',
+            icon:'pi pi-fw pi-search',
+            to: '/research'
+          },
+          {
+            label:'History',
+            icon:'pi pi-fw pi-history',
+            to: '/history'
+          }
+        ]
+      }
+    }
+  }
+</script>
