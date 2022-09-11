@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import MainPage from '@/components/MainPage.vue'
 import History from '@/components/History.vue'
 import Research from '@/components/Research.vue'
+import Profile from '@/components/Profile.vue'
 
 const routes = [
   {
@@ -15,10 +16,16 @@ const routes = [
     component: History,
   },
   {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile,
+  },
+  {
     path: '/research',
     name: 'Research',
     component: Research,
-  }
+  },
+  
 ]
 
 const router = createRouter({
